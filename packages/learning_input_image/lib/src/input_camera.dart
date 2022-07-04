@@ -144,6 +144,8 @@ class _InputCameraViewState extends State<InputCameraView> {
         _image = image;
       });
 
+      debugPrint('image path - ${_image?.path}');
+
       final img = await decodeImageFromList(image.readAsBytesSync());
 
       widget.onImage(InputImage.fromFile(image,
